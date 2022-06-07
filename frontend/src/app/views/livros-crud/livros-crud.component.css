@@ -1,0 +1,15 @@
+button {
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+.mat-button.mat-blue {
+    color: blue;
+ }
+ 
+ .mat-raised-button.mat-blue, .mat-flat-button.mat-blue{
+    background-color:#1E90FF;
+    color: white;
+ }
+

@@ -1,0 +1,88 @@
+button {
+  margin-left: auto;
+  font-size:40px;
+  width:300px;
+  height: 120px;
+  border-radius: 50px;
+}
+
+.styled-table{
+    border-collapse:collapse;
+    margin: 25px 0;
+    font-size: 1.0em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    
+}
+
+.styled-table thead tr {
+  background-color: #1E90FF;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #1E90FF;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #dbedff;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #1E90FF;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #000000;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 10px;
+    text-align: center;
+}
+
+#divBusca{
+  border:solid 50px #1E90FF;
+  border-radius:100px;
+}
+
+#txtBusca{
+  background-color: white;
+  font-size:50px;
+  width:1000px;
+  height: 110px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+}
+
+.edit {
+  margin-right:10px;
+} 
+
+.edit > i {
+  color: #d9cd26;
+}
+
+.delete > i {
+  color: #e35e6b
+}
+
+#sinopse{
+  font-weight: bold;
+  color: black;
+  text-align:justify;
+  height: auto;
+}
+
+#titulo{
+    font-size: 90px;
+    text-align: center;
+    height:90px;
+    padding-top: 80px;
+}

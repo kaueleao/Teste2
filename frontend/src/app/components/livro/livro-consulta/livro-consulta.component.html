@@ -1,0 +1,59 @@
+<div>
+    <div>
+        <p id="titulo"> Consulta de Livros </p>
+    </div>
+    <div id="divBusca">
+    <input id="txtBusca" type="text" placeholder="   Buscar Cadastro de Livro..." [(ngModel)]="filter" />
+    <button mat-raised-button (click) = "limpar()" color="warn">Limpar</button>
+    </div>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titulo do Livro</th>
+                <th>Autor</th>
+                <th>Editora</th>
+                <th>Ano</th>
+                <th>Edição</th>
+                <th>Idioma</th>
+                <th>Categoria</th>
+                <th>CDD</th>
+                <th>Estante</th>
+                <th>Prateleira</th>
+                <th>ISBN</th>
+                <th>Sinopse</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="active-row" *ngFor="let livro of livros | filter:filter; let i = index">
+                <td>{{ livro.id }}</td>
+                <td>{{ livro.titulo }}</td>
+                <td>{{ livro.autor }}</td>
+                <td>{{ livro.editora }}</td>
+                <td>{{ livro.ano }}</td>
+                <td>{{ livro.edicao }}</td>
+                <td>{{ livro.idioma }}</td>
+                <td>{{ livro.categoria }}</td>
+                <td>{{ livro.CDD }}</td>
+                <td >{{ livro.estante }}</td>
+                <td>{{ livro.prateleira }}</td>
+                <td>{{ livro.isbn }}</td>
+                <td>
+                    <!--Div para montar o accordion da Sinopse -->
+                    <div>
+                        <mat-accordion id="sinopse">
+                            <mat-expansion-panel id="sinopse">
+                                <mat-expansion-panel-header> 
+                                    <mat-panel-title matTooltip="Abrir Sinopse" id="sinopse">
+                                        Sinopse
+                                    </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                    {{ livro.observacoes }}   
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

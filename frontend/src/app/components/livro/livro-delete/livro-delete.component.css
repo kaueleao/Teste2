@@ -1,0 +1,46 @@
+button {
+    margin: 20px 15px 0px 0px;  
+    padding: 5px;
+    width: 100px;
+    font-size: 1.3em;
+}
+
+textarea{
+    height: 300px;
+}
+
+.mat-button.mat-green {
+    color: green;
+ }
+ 
+ .mat-raised-button.mat-green, .mat-flat-button.mat-green{
+    background-color: #32CD32;
+    color: white;
+ }
+
+ .mat-form-field{
+    font-size: 1.0em;
+    font-family: sans-serif;
+    margin: 15px;  
+    width: 1650px;
+ }
+
+ .grid1{
+    display:flex;
+    flex-direction:row;
+}
+
+.grid2{
+    display:flex;
+    flex-direction:row;
+}
+
+.grid3{
+    display:flex;
+    flex-direction:row;
+}
+
+.btn{
+    margin-top: 10px;
+    padding-left: 15px;
+}

@@ -1,0 +1,69 @@
+    <div>
+        <div id="divBusca">
+            <img src="assets/img/search.svg" alt="Buscar..."/>
+        <input id="txtBusca" type="text" placeholder="Buscar Cadastro do Livro..." [(ngModel)]="filter" />
+        </div>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo do Livro</th>
+                    <th>Autor</th>
+                    <th>Editora</th>
+                    <th>Ano</th>
+                    <th>Edição</th>
+                    <th>Idioma</th>
+                    <th>Categoria</th>
+                    <th>CDD</th>
+                    <th>Estante</th>
+                    <th>Prateleira</th>
+                    <th>ISBN</th>
+                    <th>Sinopse</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active-row" *ngFor="let livro of livros | filter:filter; let i = index">
+                    <td>{{ livro.id }}</td>
+                    <td>{{ livro.titulo }}</td>
+                    <td>{{ livro.autor }}</td>
+                    <td>{{ livro.editora }}</td>
+                    <td>{{ livro.ano }}</td>
+                    <td>{{ livro.edicao }}</td>
+                    <td>{{ livro.idioma }}</td>
+                    <td>{{ livro.categoria }}</td>
+                    <td>{{ livro.CDD }}</td>
+                    <td >{{ livro.estante }}</td>
+                    <td>{{ livro.prateleira }}</td>
+                    <td>{{ livro.isbn }}</td>
+                    <td>
+                        <!--Div para montar o accordion da Sinopse -->
+                        <div>
+                            <mat-accordion id="sinopse">
+                                <mat-expansion-panel id="sinopse">
+                                    <mat-expansion-panel-header> 
+                                        <mat-panel-title matTooltip="Abrir Sinopse" id="sinopse">
+                                            Sinopse
+                                        </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                        {{ livro.observacoes }}   
+                                </mat-expansion-panel>
+                            </mat-accordion>
+                        </div>
+                    </td>
+                    <td>
+                        <a matTooltip= "Alterar Cadastro Livro" routerLink="/livros/update/{{ livro.id }}" class="edit">
+                            <i class="material-icons">
+                                edit
+                            </i>
+                        </a>
+                        <a matTooltip= "Deletar Cadastro Livro" routerLink="/livros/delete/{{ livro.id }}" class="delete">
+                            <i class="material-icons">
+                                delete
+                            </i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

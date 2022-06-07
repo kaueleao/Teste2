@@ -1,0 +1,81 @@
+<mat-card>
+    <mat-card-title>Deseja Excluir Cadastro deste Livro ?</mat-card-title>
+        <form>
+            <div class="grid1">
+            <mat-form-field  class="my-form-field" appearance="outline">
+                <mat-label>Título do Livro</mat-label>
+                <input disabled type="text" matInput placeholder="Título do Livro" [value]= "livro.titulo" name="titulo">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Autor do Livro</mat-label>
+                <input disabled type="text" matInput placeholder="Autor do Livro" [value]= "livro.autor" name="autor">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Editora</mat-label>
+                <input disabled type="text" matInput placeholder="Editora" [value]= "livro.editora" name="editora">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Ano de Publicação</mat-label>
+                <input disabled type="number" matInput placeholder="Ano de Publicação" [value]= "livro.ano" name="ano">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Nº Edição</mat-label>
+                <input disabled type="text"  matInput placeholder=" Nº Edição" [value]= "livro.edicao" name="edicao"> 
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Idioma do Livro</mat-label>
+                <input disabled type="text" matInput placeholder="Idioma do Livro" [value]= "livro.idioma" name="idioma">
+            </mat-form-field>
+        </div>
+            
+            <div class="grid2">
+            <mat-form-field  appearance="outline">
+                <mat-label>Categoria do Livro</mat-label> 
+                <input disabled type="text" matInput placeholder="Categoria do Livro" [value]= "livro.categoria" name="categoria">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Nº ISBN</mat-label>
+                <input disabled type="text" matInput placeholder="Nº ISBN" [value]= "livro.isbn" name="isbn">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>CDD - Decimal de Dewey</mat-label>
+                <input disabled type="text" matInput placeholder="CDD - Decimal de Dewey" [value]= "livro.CDD" name="CDD">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Estante</mat-label>
+                <input disabled type="text" matInput placeholder="Estante" [value]= "livro.estante" name="estante">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Prateleira</mat-label>
+                <input  disabled type="text" matInput placeholder="Prateleira" [value]= "livro.prateleira" name="prateleira">
+            </mat-form-field>
+        </div>
+
+        <div class="grid3">
+            <mat-form-field  appearance="fill">
+                <mat-label>Sinopse</mat-label> 
+                <textarea disabled matInput placeholder="Sinopse do Livro" [(ngModel)]= "livro.observacoes" name="sinopse"></textarea>
+            </mat-form-field>
+        </div>
+
+        </form>
+
+        <div class="btn">
+            <button  mat-raised-button (click) = "deleteLivro()" color="green"> 
+                 Excluir
+            </button>
+
+            <button mat-raised-button (click) = "cancel()" color="warn"> 
+                Cancelar
+            </button>
+        </div>
+</mat-card>

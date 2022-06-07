@@ -1,0 +1,86 @@
+<mat-card>
+    <mat-card-title>Deseja Alterar o Cadastro deste Livro ?</mat-card-title>
+
+        <form>
+            <div class="grid1">
+            <mat-form-field  class="my-form-field" appearance="outline">
+                <mat-label>Título do Livro</mat-label>
+                <input  type="text" matInput placeholder="Título do Livro" [(ngModel)]= "livro.titulo" name="titulo">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Autor do Livro</mat-label>
+                <input type="text" matInput placeholder="Autor do Livro" [(ngModel)]= "livro.autor" name="autor">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Editora</mat-label>
+                <input type="text" matInput placeholder="Editora" [(ngModel)]= "livro.editora" name="editora">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Ano de Publicação</mat-label>
+                <input type="number" matInput placeholder="Ano de Publicação" [(ngModel)]= "livro.ano" name="ano">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Nº Edição</mat-label>
+                <input type="text"  matInput placeholder=" Nº Edição" [(ngModel)]= "livro.edicao" name="edicao"> 
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Idioma do Livro</mat-label>
+                <input type="text" matInput placeholder="Idioma do Livro" [(ngModel)]= "livro.idioma" name="idioma">
+            </mat-form-field>
+        </div>
+            
+            <div class="grid2">
+            <mat-form-field  appearance="outline">
+                <mat-label>Categoria do Livro</mat-label> 
+                <input type="text" matInput placeholder="Categoria do Livro" [(ngModel)]= "livro.categoria" name="categoria">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Nº ISBN</mat-label>
+                <input type="text" matInput placeholder="Nº ISBN" [(ngModel)]= "livro.isbn" name="isbn">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>CDD - Decimal de Dewey</mat-label>
+                <input type="text" matInput placeholder="CDD - Decimal de Dewey" [(ngModel)]= "livro.CDD" name="CDD">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Estante</mat-label>
+                <input type="text" matInput placeholder="Estante" [(ngModel)]= "livro.estante" name="estante">
+            </mat-form-field>
+            
+            <mat-form-field  appearance="outline">
+                <mat-label>Prateleira</mat-label>
+                <input  type="text" matInput placeholder="Prateleira" [(ngModel)]= "livro.prateleira" name="prateleira">
+            </mat-form-field>
+        </div>
+
+        <div class="grid3">
+            <mat-form-field  appearance="fill">
+                <mat-label>Sinopse</mat-label> 
+                <textarea matInput placeholder="Sinopse do Livro" [(ngModel)]= "livro.observacoes" name="sinopse"></textarea>
+            </mat-form-field>
+        </div>
+
+        </form>
+
+        <div class="btn">
+            <button mat-rais  mat-raised-button (click) = "updateLivro()" color="green"> 
+                 Atualizar
+            </button>
+
+            <button mat-raised-button (click) = "cancel()" color="warn"> 
+                Cancelar
+            </button>
+
+            <button mat-raised-button (click) = "mensagem()" cdkCopyToClipboard = "{{livro.isbn}}" class="copy"> 
+                Copiar ISBN
+            </button>
+        </div>
+</mat-card>
